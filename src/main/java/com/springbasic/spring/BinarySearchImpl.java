@@ -1,13 +1,19 @@
 package com.springbasic.spring;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Primary;
+import org.springframework.stereotype.Component;
+
+@Component
+@Primary
 public class BinarySearchImpl  {
     //sorted array
     //search array
     //return result
+    @Autowired
     private SortAlgorithm sortAlgorithm;
 
-    public BinarySearchImpl(SortAlgorithm sortAlgorithm) {
-        super();
+    public void setSortAlgorithm(SortAlgorithm sortAlgorithm) {
         this.sortAlgorithm = sortAlgorithm;
     }
 
